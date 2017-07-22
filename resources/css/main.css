@@ -1,0 +1,516 @@
+/* NOTES:
+-General styling
+-Mobile first design
+-@media query desktop breakpoint min-width 739px and max-width 980px
+*/
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../fonts/Poppins-Bold.ttf);
+  src: url(../fonts/Poppins-Light.ttf);
+  src: url(../fonts/Poppins-Medium.ttf);
+  src:url(../fonts/Poppins-Regular.ttf);
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+body {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-size: 100%;
+  background-color: #351552;
+}
+
+.desktop {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.banner img, .campus img {
+  border-radius: 3px;
+}
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+h4 {
+  margin-top: 0;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 0.75em;
+  color: #4f00a8;
+}
+
+p {
+  font-size: 0.875em;
+  line-height: 1.43;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 64px; /*4em; */
+  background-color: #351552;
+  transition: top 0.1s ease-in-out;
+}
+
+.nav-up {
+    top: -64px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+nav img {
+  width: 80%;
+}
+
+path {
+  fill: white;
+  opacity: 0.4;
+}
+
+main {
+  position: relative;
+  top: 64px;
+}
+
+
+/* --- Banner --- */
+
+.banner {
+  background-image: radial-gradient(circle at 50% 59%, #673599, #411d63);
+}
+
+.banner img {
+  border-radius: 3px;
+}
+
+.banner h1 {
+  padding-bottom: 32px;
+  color: #ffffff;
+}
+
+.banner h3 {
+  padding-bottom: 24px;
+  opacity: 0.75;
+  color: #ffffff;
+}
+
+.banner .flex-40 {
+  padding: 16px 16px 32px 16px;
+  margin-right: 16px;
+}
+
+.button {
+  display: block;
+  width: 90%;
+  padding: 8px 20px 8px 20px;
+  border: 1px solid #f27c36;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 0.875em;
+  color: #ffffff;
+  background-image: linear-gradient(to right, #f27c36, #ed485f);
+  box-shadow: 0 2px 25px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  background-image: none;
+  box-shadow: none;
+}
+
+/* --- Campus --- */
+
+.campus {
+  display: flex;
+}
+.campus .flex-60 {
+  display: none;
+}
+
+.campus .flex-40 {
+  padding: 0 0 32px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.info-box {
+  padding: 16px 16px 0 16px;
+}
+
+.info-box-content {
+  padding: 16px 0 0 16px;
+}
+
+.info-box-content h3 {
+  padding-bottom: 8px;
+  color: #4f00a8;
+}
+
+.info-box-content p {
+  padding-bottom: 8px;
+  opacity: 0.5;
+  color: #0c0033;
+	color: var(--midnight-blue);
+}
+
+.info-box-content a {
+  font-size: 0.5;
+	color: #f06c43;
+}
+
+/* --- Online --- */
+
+.online {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-image: radial-gradient(circle at 50% 59%, #673599, #411d63);
+}
+
+.online h2 {
+  padding-bottom: 16px;
+  text-align: center;
+	color: #ffffff;
+}
+
+.online-card-mobile {
+  margin-right: 16px;
+  margin-left: 16px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.online-card-mobile p {
+  margin-top: 0;
+  padding-bottom: 20px;
+  color: #0c0033;
+  opacity: 0.5;
+}
+
+.online-card-mobile .online-card-content {
+  display: none;
+}
+
+.online-card-mobile button {
+  display: block;
+  padding: 16px 0 16px 16px;
+  width: 100%;
+  text-align: left;
+  font-size: 1.25em;
+  font-weight: 500;
+  opacity: 0.9;
+	mix-blend-mode: multiply;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+	background-image: linear-gradient(87deg, #f27c36, #ed485f);
+}
+
+.online-card-mobile:hover button {
+    margin-bottom: 0;
+    border-radius: 5px 5px 0 0;
+  }
+
+.online-card-mobile:hover .online-card-content {
+    display: block;
+  }
+
+/* --- Companies --- */
+
+.companies {
+  padding-top: 32px;
+  padding-bottom: 24px;
+  background-color: #ffffff;
+}
+
+.companies h2 {
+  padding-bottom: 32px;
+  text-align: center;
+  color: #4f00a8;
+}
+
+/* Footer */
+
+footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 36px;
+  margin-bottom: 16px;
+  padding-top: 16px;
+  padding-left: 16px;
+  background-color: #351552;
+  font-size: 0.625em;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 739px) {
+
+/* --- General --- */
+
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2.250em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+/* --- Header --- */
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .title img {
+    width: 35px;
+    padding-left: 24px;
+  }
+  .colmar {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-family: 'Poppins light 300', sans-serif;
+  }
+  .academy {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5em;
+    font-family: 'Poppins light 300', sans-serif;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  .navbar ul li a {
+  color: #ffffff;
+  opacity: 0.75;
+  }
+  .navbar ul li a:hover {
+  opacity: 1;
+  }
+  .navbar ul li+li {
+  padding-left: 16px; /*1em;*/
+  }
+
+/* --- Banner --- */
+
+  .banner {
+    display: flex;
+  }
+  .banner .flex-60 {
+    width: 60%;
+    padding: 32px 24px;
+  }
+  .banner .flex-40 {
+    width: 40%;
+    align-self: center;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .banner .button {
+    width: 50%;
+  }
+
+/* --- Campus --- */
+
+  .campus {
+    display: flex;
+    background-color: #ffffff;
+  }
+  .campus .flex-60 {
+    display: block;
+    padding: 32px 24px;
+    width: 60%;
+  }
+  .campus .flex-60 h2 {
+    padding-top: 32px;
+    padding-bottom: 24px;
+    color: #4f00a8;
+  }
+  .campus .flex-60 p {
+    padding-bottom: 20px;
+    line-height: 1.5;
+    opacity: 0.5;
+    color: #0c0033;
+    color: var(--midnight-blue);
+  }
+  .campus .flex-60 span {
+    padding-bottom: 60px;
+    font-size: 0.875em;
+    color: #4f00a8;
+  }
+  .campus .flex-40 {
+    width: 40%;
+    padding-top: 16px;
+  }
+  .info-box {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+  }
+  .info-box img {
+    width: 35%;
+  }
+
+  .info-box:hover {
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 13px 50px 0px rgba(161,156,171,0.5);
+    transition: 1s;
+  }
+  .info-box-content a:hover {
+    color: blue;
+  }
+
+/* --- Online --- */
+
+  .online-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .online-card-desktop {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 25%;
+    margin: 32px;
+    border-radius: 5px;
+  }
+  .online-card-desktop:hover {
+    transition: all 300ms linear;
+    transform: scale(1.1);
+  }
+  .online-card-desktop .online-card-content {
+    padding: 16px 24px;
+  }
+  .online-card-desktop h3 {
+    padding-bottom: 16px;
+    color: rgb(74,74,74);
+  }
+  .online-card-desktop h4 {
+    padding-bottom: 16px;
+    color: #4f00a8;
+  }
+  .online-card-desktop p {
+    color: #0c0033;
+    opacity: 0.5;
+  }
+  .online-card-desktop img {
+    border-radius: 5px 5px 0 0;
+  }
+
+  /* --- Companies --- */
+
+  .companies-flex {
+    display: flex;
+    padding-left: 24px;
+  }
+  .companies .flex-60 {
+    padding: 32px 24px;
+    width: 60%;
+  }
+  .companies .flex-60 h2 {
+    text-align: left;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    color: #4f00a8;
+  }
+  .companies .flex-60 p {
+    padding-bottom: 101px;
+    line-height: 1.5;
+    opacity: 0.5;
+    color: #0c0033;
+    color: var(--midnight-blue);
+  }
+  .companies .flex-60 span {
+    padding-bottom: 60px;
+    font-size: 0.875em;
+    color: #4f00a8;
+  }
+  .companies .flex-40 {
+    width: 40%;
+    padding-top: 16px;
+  }
+
+  /* --- Footer --- */
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: white;
+  }
+
+  footer ul {
+    padding-right: 24px;
+  }
+
+  footer ul li {
+    display: inline-block;
+    padding-left: 15px;
+  }
+
+  footer a {
+    color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h2 {
+    font-size: 1.9em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+}

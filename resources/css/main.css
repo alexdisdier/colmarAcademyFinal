@@ -362,6 +362,9 @@ footer {
     padding: 32px 24px;
     width: 60%;
   }
+  .campus .flex-60 img {
+    width: 97.5%;
+  }
   .campus .flex-60 h2 {
     padding-top: 32px;
     padding-bottom: 24px;
